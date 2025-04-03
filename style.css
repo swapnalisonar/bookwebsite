@@ -1,0 +1,791 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f3f6;
+    padding: 20px 40px;
+    /* Adjusted padding for better spacing */
+    color: black;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    /* Ensure consistent font size */
+}
+
+/* Responsive Navbar Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        /* Reduce gap for smaller screens */
+    }
+}
+
+@media (max-width: 414px) {
+    .navbar {
+        padding: 10px;
+        /* Further reduce padding for smaller devices */
+    }
+
+    .navbar ul {
+        gap: 8px;
+        /* Reduce gap for compact layout */
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+        /* Adjust font size for smaller screens */
+    }
+}
+
+.add-btn {
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    width: 100px;
+    height: 30px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: rgb(236, 227, 232);
+}
+
+.hero img {
+    width: 400px;
+    /* Set a consistent width */
+    height: 400px;
+    /* Set a consistent height */
+    object-fit: cover;
+    /* Ensure images maintain aspect ratio */
+    border-radius: 5px;
+    /* Optional: Add rounded corners */
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out, slideIn 3s ease-in-out;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 3;
+    }
+}
+
+/* Keyframes for slide-in effect */
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.main-content {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 20%;
+    background: white;
+    padding: 20px;
+}
+
+.books {
+    flex: 1;
+    padding: 20px;
+}
+
+.book-list,
+.popular-books {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Ensure cards wrap to the next line if needed */
+    justify-content: space-between;
+    /* Distribute cards evenly */
+}
+
+.book-card {
+    width: 200px;
+    /* Set a fixed width for all cards */
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img {
+    width: 100%;
+    /* Ensure images fit within the card */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.book-card h4 {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.book-card .stars {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.book-card .add-btn {
+    margin-top: 10px;
+}
+
+.stars {
+    color: #f8d817;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.book img,
+.popular-books img {
+    width: 100%;
+    height: 350px;;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.footer-content {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+.contact-us,
+.suggest-book {
+    text-align: center;
+    padding: 20px;
+    background: rgb(224, 219, 220);
+
+}
+
+.contact-us form,
+.suggest-book form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100;
+    margin: auto;
+    background: #fff;
+    /* Card background */
+    padding: 50px;
+    /* Card padding */
+    border: 1px solid #ddd;
+    /* Card border */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    text-align: left;
+}
+
+.contact-us input,
+.contact-us textarea,
+.contact-us button,
+.suggest-book input,
+.suggest-book textarea,
+.suggest-book button {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact-us button,
+.suggest-book button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-us button:hover,
+.suggest-book button:hover {
+    background: #0056b3;
+    /* Darker blue on hover */
+}
+
+.contact-us form label,
+.suggest-book form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.msg {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    color: black;
+    background: rgb(224, 219, 220);
+    line-height: 1.6;
+    /* Add spacing between lines */
+}
+
+.what-we-provide {
+    display: flex;
+    /* Use flexbox for alignment */
+    flex-direction: column;
+    /* Stack text and image vertically */
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: center;
+    /* Center items vertically */
+    gap: 20px;
+    /* Space between text and image */
+    padding: 20px;
+    background: #f8f9fa;
+    text-align: center;
+    /* Center-align text */
+}
+
+.what-we-provide img {
+    /* Set consistent height */
+    object-fit: fill;
+    /* Ensure images maintain aspect ratio */
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .books {
+        padding: 10px;
+    }
+
+    .book-card {
+        width: 100%;
+    }
+
+    .contact-us form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .book-list,
+    .popular-books {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-card {
+        width: 90%;
+    }
+
+    .contact-us form,
+    .suggest-book form {
+        padding: 15px;
+    }
+
+    .contact-us form label {
+        font-size: 0.9rem;
+    }
+
+    .contact-us form input,
+    .contact-us form textarea,
+    .contact-us form button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .book-card {
+        width: 100%;
+    }
+
+    .footer-content {
+        font-size: 0.8rem;
+    }
+
+    .contact-us {
+        padding: 10px;
+    }
+
+    .contact-us form {
+        padding: 5px;
+    }
+
+    .contact-us form label {
+        font-size: 0.8rem;
+    }
+
+    .contact-us form input,
+    .contact-us form textarea,
+    .contact-us form button {
+        font-size: 0.8rem;
+    }
+
+    .contact-us form input,
+    .contact-us form textarea {
+        padding: 8px;
+    }
+
+    .contact-us form button {
+        padding: 10px;
+    }
+
+    .suggest-book form {
+        padding: 10px;
+    }
+}
+
+/* Responsive Styles for 414px (e.g., iPhone 11 Pro Max, Pixel 4 XL) */
+@media (max-width: 414px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+    }
+
+    .hero img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .book-card {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .contact-us form,
+    .suggest-book form {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .contact-us input,
+    .contact-us textarea,
+    .suggest-book input,
+    .suggest-book textarea {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .contact-us button,
+    .suggest-book button {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .footer-content {
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsive Styles for 375px (e.g., iPhone X, iPhone 12 Mini) */
+@media (max-width: 375px) {
+    .navbar {
+        padding: 8px;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
+    .hero img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .book-card {
+        width: 100%;
+        max-width: 85%;
+    }
+
+    .contact-us form,
+    .suggest-book form {
+        max-width: 100%;
+        padding: 8px;
+    }
+
+    .contact-us input,
+    .contact-us textarea,
+    .suggest-book input,
+    .suggest-book textarea {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .contact-us button,
+    .suggest-book button {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .footer-content {
+        font-size: 0.7rem;
+    }
+}
+
+/* Flexbox adjustments for better alignment */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book-list,
+.popular-books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-us form,
+.suggest-book form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.book-card a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: blue;
+    text-align: center;
+}
+
+.book-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Navbar */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Responsive Hero Section */
+.hero {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive Book Cards */
+.book-list,
+.popular-books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.book-card {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .book-card {
+        max-width: 90%;
+    }
+}
+
+/* Responsive Forms */
+.contact-us form,
+.suggest-book form {
+    max-width: 60%;
+    padding: 15px;
+    margin: auto;
+}
+
+.contact-us input,
+.contact-us textarea,
+.suggest-book input,
+.suggest-book textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+}
+
+.contact-us button,
+.suggest-book button {
+    font-size: 0.9rem;
+    padding: 10px;
+}
+
+@media (max-width: 480px) {
+
+    .contact-us form,
+    .suggest-book form {
+        padding: 10px;
+    }
+
+    .contact-us input,
+    .contact-us textarea,
+    .suggest-book input,
+    .suggest-book textarea {
+        font-size: 0.85rem;
+    }
+
+    .contact-us button,
+    .suggest-book button {
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive Sidebar */
+.sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 20%;
+    }
+}
+
+/* Responsive Footer */
+.footer-content {
+    font-size: 0.9rem;
+    padding: 15px;
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        font-size: 0.8rem;
+    }
+}

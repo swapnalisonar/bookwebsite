@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SoulboundStories</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="contact.js" defer></script>
+   
+  
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img src="./img/l.png" alt="Logo">
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#books">About</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="hero" class="hero">
+            <h2>Books That Inspire, Gifts That Touch the Heart.</h2>
+            <p>Find Your Favorite Book And Hear Your Story Boldly With Personalized Letters and Gifts.</p>
+            <img src="./img/logo.png" alt="Hero Image">
+        </div>
+    </header>
+
+    <section id="books" class="main-content">
+        <aside class="sidebar">
+            <h3>Book by Genre</h3>
+            <ul>
+                <li>All Genres</li>
+                <li>Business</li>
+                <li>Science</li>
+                <li>Fiction</li>
+                <li>Philosophy</li>
+            </ul>
+        </aside>
+        <div class="books">
+            <h3>Recommended</h3>
+            <div class="book-list">
+                <div class="book-card">
+                    <img src="./img/better.jpg" alt="Better Than Before">
+                    <h4 id="book-better-than-before">Better Than Before</h4>
+                    <div class="stars">★★★★☆</div>
+                    <a href="https://www.google.co.in/books/edition/Better_Than_Before/XbdvBQAAQBAJ?hl=en&gbpv=0"
+                        target="_blank" style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div>
+                <div class="book-card">
+                    <img src="./img/jew.jpg" alt="You Do You " width="200" height="200">
+                    <h4 id="book-you-do-you">You Do You</h4>
+                    <div class="stars">★★★☆☆</div>
+                    <a href="https://www.google.co.in/books/edition/You_Do_You/y2kpDwAAQBAJ?hl=en&gbpv=0" target="_blank"
+                        style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div>
+                <div class="book-card">
+                    <img src="./img/b.jpg" alt="You Do You">
+                    <h4 id="book-gift">The Gift</h4>
+                    <div class="stars">★★★☆☆</div>
+                    <a href=https://www.google.com/search?q=The+Gift+book+summary&sca_esv=c22e1abeeee110b1&rlz=1C1ONGR_enIN1024IN1024&sxsrf=AHTn8zpKaLTKgMbRT8cnzxzZ4aLMQQfjYg%3A1743602313523&ei=iULtZ4zDH_2n2roP-7WdkA8&ved=0ahUKEwjMq5vkwLmMAxX9k1YBHftaB_IQ4dUDCBA&uact=5&oq=The+Gift+book+summary&gs_lp=Egxnd3Mtd2l6LXNlcnAiFVRoZSBHaWZ0IGJvb2sgc3VtbWFyeTIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMggQABgHGAgYHjIIEAAYBRgHGB4yCBAAGAUYBxgeSJoDUABYAHAAeACQAQCYAZsBoAGbAaoBAzAuMbgBA8gBAPgBAvgBAZgCAaACqQGYAwCSBwMwLjGgB9gHsgcDMC4xuAepAQ&sclient=gws-wiz-serp" target="_blank"
+                        style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div>
+                <div class="book-card">
+                    <img src="./img/don.jpg" alt="You Do You">
+                    <h4 id="book-do-epic-shit-done">Do Epic Shit Done</h4>
+                    <div class="stars">★★★☆☆</div>
+                    <a href="https://books.google.co.in/books/about/Summary_of_Ankur_Warikoo_s_Do_Epic_Shit.html?id=I516EAAAQBAJ&redir_esc=y/" target="_blank"
+                        style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div>
+                <!-- <div class="book-card">
+                    <img src="./img/brida.jpg" alt="You Do You">
+                    <h4 id="book-do-epic-shit-done">Brida</h4>
+                    <div class="stars">★★★☆☆</div>
+                    <a href="https://www.amazon.in/Brida-Paulo-Coelho/dp/0007278594" target="_blank"
+                        style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div>
+                <div class="book-card">
+                    <img src="./img/gita.jpg" alt="You Do You">
+                    <h4 id="book-do-epic-shit-done">Bhagavad Gita</h4>
+                    <div class="stars">★★★☆☆</div>
+                    <a href="https://www.britannica.com/topic/Bhagavad-Gita" target="_blank"
+                        style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div> -->
+            </div>
+            <h3>Popular</h3>
+            <div class="popular-books">
+                <div class="book-card">
+                    <img src="./img/art.jpg" alt="Book 3">
+                    <h4 id="book-subtle-art">The Subtle Art Of Dealing With People</h4>
+                    <div class="stars">★★★★★</div>
+                    <a href="https://www.google.co.in/books/edition/THE_SUBTLE_ART_OF_DEALING_WITH_PEOPLE/Eq94EAAAQBAJ?hl=en&gbpv=0" target="_blank"
+                        style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div>
+                <div class="book-card">
+                    <img src="./img/twist.jpeg" alt="Book 4">
+                    <h4 id="book-twisted-love">Twisted Love</h4>
+                    <div class="stars">★★★★☆</div>
+                    <a href="https://books.google.co.in/books/about/Twisted_Love.html?id=IedjEAAAQBAJ&redir_esc=y"
+                        target="_blank" style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div>
+                <div class="book-card">
+                    <img src="./img/do epic.jpg" alt="Book 5">
+                    <h4 id="book-do-epic-sheet">Do Epic Shit</h4>
+                    <div class="stars">★★★☆☆</div>
+                    <a href="https://www.google.co.in/books/edition/Do_Epic_Shit/MZMJEQAAQBAJ?hl=en&gbpv=0" target="_blank"
+                        style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div>
+                <div class="book-card">
+                    <img src="./img/the.jpg" alt="Book 6">
+                    <h4 id="book-american-roommate">The American Roommate Experiment</h4>
+                    <div class="stars">★★★★☆</div>
+                    <a href="https://www.google.co.in/books/edition/The_American_Roommate_Experiment/qXmAEAAAQBAJ?hl=en&gbpv=0"
+                        target="_blank" style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div>
+                <!-- <div class="book-card">
+                    <img src="./img/atomic.jpg" alt="Book 6">
+                    <h4 id="book-american-roommate">Atomic Habits</h4>
+                    <div class="stars">★★★★☆</div>
+                    <a href="https://www.amazon.in/Atomic-Habits-James-Clear/dp/1847941834/ref=asc_df_1847941834/?tag=googleshopdes-21&linkCode=df0&hvadid=710156608691&hvpos=&hvnetw=g&hvrand=7018517841182551066&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9062279&hvtargid=pla-551566274852&psc=1&mcid=2755d09f2f203b63b8068b50b96cd804&tag=googleshopdes-21&linkCode=df0&hvadid=710156608691&hvpos=&hvnetw=g&hvrand=7018517841182551066&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9062279&hvtargid=pla-551566274852&psc=1&gad_source=1"
+                        target="_blank" style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div>
+                <div class="book-card">
+                    <img src="./img/alchmist.jpg" alt="Book 6">
+                    <h4 id="book-american-roommate">The Alchemist</h4>
+                    <div class="stars">★★★★☆</div>
+                    <a href="https://www.sparknotes.com/lit/the-alchemist/summary/" target="_blank"
+                        style="color: blue;">Description</a>
+                    <button class="add-btn" onclick="showMessage()">Buy</button>
+                </div> -->
+            </div>
+            <!-- Modal Structure -->
+            <div id="messageModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Contact Information</h2>
+                    <p id="modalMessage"></p>
+                </div>
+            </div>
+
+            <div class="what-we-provide">
+                <h2>What We Provide</h2>
+                <img src="./img/unbox.png" alt="Personalized Letters">
+
+            </div>
+    </section>
+
+    <section id="contact-us" class="contact-us">
+        <div class="msg">
+            <p>
+                This small startup has been a great success so far. We have reached out to many people and helped them
+                find the perfect book.<br>
+                Fill out the form above to get in touch with us, and we will reach out to you.<br>
+                You can order your book by filling out the contact form below or calling us directly. We provide the
+                best service for you, and your order will be delivered within 7 business days
+            </p>
+        </div>
+        <h3>Contact Us</h3>
+        <form id="contact-us form" onSubmit="sendAutoReply(event)">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <label for="phone">Your Phone Number</label>
+            <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+            <label for="book-name">Add Book Name</label>
+            <input type="text" id="book-name" placeholder="Add Book Name" required>
+
+            <label for="address">Add Your Address</label>
+            <textarea id="address" placeholder="Add Your Address" rows="4" required></textarea>
+
+            <label for="message">Write Message</label>
+            <textarea id="message" placeholder="Add Your Contact Details or Write Message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section class="suggest-book" onSubmit="sendAutoReply(event)">
+        <h3>Suggest a Book</h3>
+        <p>If you're new and confused, let us help you find the perfect book!</p>
+        <form id="suggest-book form">
+            <label for="suggest-email">Your Email</label>
+            <input type="email" id="suggest-email" placeholder="Your Email" required>
+
+            <label for="suggest-message">What kind of book are you looking for?</label>
+            <textarea id="suggest-message" placeholder="What kind of book are you looking for?" rows="4"
+                required></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </section>
+
+    <footer class="footer-content">
+
+        <p>Contact us: soulboundstories0@gmail.com</a> | Mobile Number: 8369106435 | 9930743014</p>
+        <p>Founder: Swaksha</p>
+        <p>&copy; 2025 SoulboundStories</p>
+    </footer>
+
+    <script>
+        document.querySelector(".login-btn").addEventListener("click", function () {
+            alert("Login functionality coming soon!");
+        });
+        document.querySelector(".contact-us form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Your message has been sent!");
+        });
+        document.querySelector(".suggest-book form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Your book suggestion request has been submitted!");
+        });
+
+        // Function to show the modal with contact information
+        function showMessage() {
+            // Define the contact information
+            const contactEmail = "soulboundstories0@gmail.com";
+            const whatsappNumber = "8369106435";
+            const whatsappNumbers = "9930743014";
+
+            // Create the message to display
+            const message = `
+            <p>Email: <a href="mailto:${contactEmail}" style="color: blue;">${contactEmail}</a></p>
+            <p>WhatsApp: <a href="https://wa.me/${whatsappNumber}" target="_blank" style="color: blue;">${whatsappNumber}</a></p>
+             <p>WhatsApp: <a href="https://wa.me/${whatsappNumbers}" target="_blank" style="color: blue;">${whatsappNumbers}</a></p>
+            <p>You can order your book by filling out the contact form below or calling us directly. We provide the best service for you, and your order will be delivered within 7 business days.😊</p>
+        `;
+
+            // Set the message in the modal
+            document.getElementById("modalMessage").innerHTML = message;
+
+            // Display the modal
+            const modal = document.getElementById("messageModal");
+            modal.style.display = "block";
+
+            // Close the modal when the user clicks on <span> (x)
+            const span = document.getElementsByClassName("close")[0];
+            span.onclick = function () {
+                modal.style.display = "none";
+            };
+
+            // Close the modal when the user clicks anywhere outside of the modal
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        }
+
+        // Update the button onclick attributes in the HTML
+        document.querySelectorAll('.add-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                showMessage(); // Show the popup without the book name
+            });
+        });
+    </script>
+</body>
+
+</html>
